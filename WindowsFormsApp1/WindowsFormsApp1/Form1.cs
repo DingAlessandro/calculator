@@ -31,196 +31,53 @@ namespace WindowsFormsApp1
             }
             else
             {
-                if (t == 0 || t == 2)
-                {
-                    if(t == 2) 
-                    {
-                        a = "";
-                        t = 0;
-                    }
-                    a += ",";
-                    insA();
-                }
-                if (b == null)
-                {
-                }
-                else
-                {
-                    b += ",";
-                    insB();
-                }
+                insT(',');
             }
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "1";
-                insA();
-            }
-            else
-            {
-                b += "1";
-                insB();
-            }
+            insT('1');
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "2";
-                insA();
-            }
-            else
-            {
-                b += "2";
-                insB();
-            }
+            insT('2');
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "3";
-                insA();
-            }
-            else
-            {
-                b += "3";
-                insB();
-            }
+            insT('3');
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "4";
-                insA();
-            }
-            else
-            {
-                b += "4";
-                insB();
-            }
+            insT('4');
         }
 
         private void button13_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "5";
-                insA();
-            }
-            else
-            {
-                b += "5";
-                insB();
-            }
+            insT('5');
         }
 
         private void button12_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "6";
-                insA();
-            }
-            else
-            {
-                b += "6";
-                insB();
-            }
+            insT('6');
         }
 
         private void button16_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "7";
-                insA();
-            }
-            else
-            {
-                b += "7";
-                insB();
-            }
+            insT('7');
         }
 
         private void button14_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "8";
-                insA();
-            }
-            else
-            {
-                b += "8";
-                insB();
-            }
+            insT('8');
         }
 
         private void button15_Click(object sender, EventArgs e)
         {
-            if (t == 0 || t == 2)
-            {
-                if (t == 2)
-                {
-                    a = "";
-                    t = 0;
-                }
-                a += "9";
-                insA();
-            }
-            else
-            {
-                b += "9";
-                insB();
-            }
+            insT('9');
         }
 
         private void button17_Click(object sender, EventArgs e)
@@ -236,24 +93,7 @@ namespace WindowsFormsApp1
             }
             else 
             {
-                if(t == 0 || t == 2) 
-                {
-                    if (t == 2)
-                    {
-                        a = "";
-                        t = 0;
-                    }
-                    a += "0";
-                    insA();
-                }
-                if (b.Length == 0)
-                {
-                }
-                else
-                {
-                    b += "0";
-                    insB();
-                }
+                insT('0');
             }
         }
 
@@ -332,6 +172,25 @@ namespace WindowsFormsApp1
                 insA();
                 t = 2;
                 b = "";
+            }
+        }
+
+        public void insT(char c) 
+        {
+            if (t == 0 || t == 2)
+            {
+                if (t == 2)
+                {
+                    a = "";
+                    t = 0;
+                }
+                a += c;
+                insA();
+            }
+            else
+            {
+                b += c;
+                insB();
             }
         }
 
